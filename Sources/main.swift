@@ -22,9 +22,7 @@ enum Pizza: String {
 
     func getName() -> String {
         switch self {
-        case .napoletana: return rawValue
-        case .calzone: return rawValue
-        case .siciliana: return rawValue
+        case .napoletana, .calzone, .siciliana: return rawValue
         }
     }
 }
