@@ -19,6 +19,14 @@ enum Pizza: String {
     case napoletana = "Pizza Napoletana"
     case calzone = "Pizza Calzone"
     case siciliana = "Pizza Siciliana"
+
+    func getName() -> String {
+        switch self {
+        case .napoletana: return rawValue
+        case .calzone: return rawValue
+        case .siciliana: return rawValue
+        }
+    }
 }
 
 let napoletana: Pizza = .napoletana
@@ -29,7 +37,7 @@ var siciliana: Pizza = .siciliana
 
 func task3(pizza: Pizza) {
     print("Задание №3")
-    print("Вы задали пиццу \"\(pizza.rawValue)\"\n")
+    print("Вы задали пиццу \"\(pizza.getName())\"\n")
 }
 
 let amount: Double = 10000
